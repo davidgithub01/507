@@ -12,17 +12,19 @@ $animals = [
     'mamal'
 ];
 
+
 function listWrapper($content){
-    echo '<li>' . $content . '</li>';
+    echo '<li>' . $content . '.</li>';
 }
+?>
 
-echo '<ul>';
+<h1>My List of Animals</h1>
+<ul>
+<? foreach($animas as $animal) : ?>
+    <li><?= $animal ?></li>
+<? endforeach ?>
+</ul>
 
-foreach($animals as $animal){
-    listWrapper($animal);
-}
-
-echo '</ul>';
 
 
 
