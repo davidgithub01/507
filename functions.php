@@ -7,3 +7,5 @@ function get_hello($name){
 function the_hello($name){
     print hello($name);
 }
+
+include 'data.php';
