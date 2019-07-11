@@ -5,10 +5,12 @@ function listWrapper($content){
 }
 ?>
 
-<h1>My List of Animals</h1>
+<h1>My List of Posts</h1>
 <ul>
-<? foreach($animals as $animal) : ?>
-    <li><?= $animal ?></li>
+<? foreach($posts as $post) : ?>
+    <li><?= $post->post_title ?>
+        <div><?= $post->post_content ?></div>
+    </li>
 <? endforeach ?>
 </ul>
 
