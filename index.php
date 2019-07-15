@@ -1,20 +1,10 @@
-<?php
-
-function listWrapper($content){
-    echo '<li>' . $content . '.</li>';
-}
-?>
-
 <h1>My List of Posts</h1>
 <ul>
-<? foreach($posts as $post) : ?>
-    <li><?= $post->post_title ?>
-        <div><?= $post->post_content ?></div>
-    </li>
-<? endforeach ?>
+    <? while (have_posts()) : the_post(); ?>
+        <li><?php the_title() ?></li>
+        <?php the_content() ?>
+    <? endwhile ?>
 </ul>
-
-
-
-
+        
+        
 
